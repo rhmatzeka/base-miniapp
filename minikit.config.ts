@@ -31,9 +31,9 @@ export const minikitConfig = {
     primaryCategory: "utility",
     tags: ["example"],
     heroImageUrl: `${ROOT_URL}/hero.png`,
-    tagline: "",
-    ogTitle: "",
-    ogDescription: "",
+    tagline: "baest miniapp ever",
+    ogTitle: " My MiniKit App",
+    ogDescription: " This is my MiniKit App built on Base.",
     ogImageUrl: `${ROOT_URL}/hero.png`,
   },
 } as const;
