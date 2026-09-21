@@ -1,39 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-onchain`](https://www.npmjs.com/package/create-onchain).
+# Base Mini App
 
+A starter **mini app** for the Base app and Farcaster. A mini app is a small web app that opens right inside a social app, where users can connect their wallet and make on-chain transactions without leaving the feed.
 
-## Getting Started
+**Live demo:** https://base-miniapp-one.vercel.app
 
-First, install dependencies:
+## What it shows
 
-```bash
-npm install
-# or
-yarn install
-# or
-pnpm install
-# or
-bun install
-```
+- **Wallet connection** with OnchainKit
+- A sample **on-chain transaction**
+- **Quick Auth** sign-in through Farcaster (`app/api/auth/route.ts`)
+- The **manifest** that registers the mini app (`app/.well-known/farcaster.json`)
 
-Next, run the development server:
+It was created with Coinbase's `create-onchain` template and is a good base for building your own mini app.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Next.js, TypeScript, OnchainKit, Farcaster Mini App SDK, wagmi, viem
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Getting started
 
+You need Node.js 18+ and a free API key from the [Coinbase Developer Platform](https://portal.cdp.coinbase.com/).
 
-## Learn More
+1. Install dependencies:
 
-To learn more about OnchainKit, see our [documentation](https://docs.base.org/onchainkit).
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, see the [Next.js documentation](https://nextjs.org/docs).
+2. Create a `.env.local` file:
+
+   ```env
+   NEXT_PUBLIC_ONCHAINKIT_API_KEY=your_key
+   NEXT_PUBLIC_URL=http://localhost:3000
+   ```
+
+3. Start the app and open http://localhost:3000:
+
+   ```bash
+   npm run dev
+   ```
+
+## Customize it
+
+- Change the app's name, description, and images in `minikit.config.ts`.
+- Edit the main screen in `app/page.tsx`.
+
+## Learn more
+
+- [OnchainKit docs](https://docs.base.org/onchainkit)
+- [Base Mini Apps docs](https://docs.base.org/mini-apps)
