@@ -49,3 +49,7 @@ You need Node.js 18+ and a free API key from the [Coinbase Developer Platform](h
 
 - [OnchainKit docs](https://docs.base.org/onchainkit)
 - [Base Mini Apps docs](https://docs.base.org/mini-apps)
+
+## License
+
+Released under the [MIT License](LICENSE).
